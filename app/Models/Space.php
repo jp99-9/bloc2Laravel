@@ -12,6 +12,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class Space extends Model
 {
+
+    protected $fillable = [
+        'name',
+        'regNumber',
+        'observation_ca',
+        'observation_es',
+        'observation_en',
+        'email',
+        'phone',
+        'website',
+        'accesType',
+        'totalScore',
+        'countScore',
+        'address_id',
+        'user_id',
+        'space_type_id'
+    ];
+
+    protected $guarded = ['id'];
+
+
     public function address(){
         return $this->hasOne(Address::class);
     }

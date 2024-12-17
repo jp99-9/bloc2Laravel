@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Municipality extends Model
 {
+
+    protected $fillable = ['name', 'island_id'];
+
+    protected $guarded = ['id'];
+    
     public function island()
     {
         return $this->belongsTo(Island::class);
