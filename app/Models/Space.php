@@ -17,8 +17,6 @@ class Space extends Model
         'name',
         'regNumber',
         'observation_ca',
-        'observation_es',
-        'observation_en',
         'email',
         'phone',
         'website',
@@ -34,7 +32,7 @@ class Space extends Model
 
 
     public function address(){
-        return $this->hasOne(Address::class);
+        return $this->belongsTo(Address::class);
     }
 
     public function user(){
