@@ -42,7 +42,7 @@ class SpaceResource extends JsonResource
             'Servicios' => ServiceResource::collection($this->whenLoaded('services')),
             'Modalidades' => ModalityResource::collection($this->whenLoaded('modalities')),
             'Tipo de espacio' => SpaceTypeResource::collection($this->whenLoaded('spaceType')),
-            'Usuario'=> new UserResource($this->whenLoaded('user')),
+            'Usuario'=> new UserResource($this->whenLoaded('user'))
 
         ];
     }

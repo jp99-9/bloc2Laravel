@@ -15,5 +15,6 @@ Route::put('/user/{id}', [UserController::class, 'update']);
 Route::put('/user/updateMail/{email}', [UserController::class, 'updateMail']);
 Route::delete('/user/{email}', [UserController::class, 'destroy']);
 
-Route::get('/space', [SpaceController::class, 'index']);
+Route::get('/spaces/{island?}', [SpaceController::class, 'index']);
 Route::get('/space/{id}', [SpaceController::class, 'show']);
+Route::post('/space', [SpaceController::class, 'store']);

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Zone;
+use App\Models\Municipality;
 use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
@@ -15,8 +17,19 @@ class Address extends Model
 
     protected $guarded = ['id'];
 
-    
-    public function spaces(){
+
+    public function spaces()
+    {
         return $this->hasOne(Space::class);
+    }
+
+    public function municipality()
+    {
+        return $this->belongsTo(Municipality::class);
+    }
+
+    public function zone()
+    {
+        return $this->belongsTo(Zone::class);
     }
 }

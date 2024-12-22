@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('url', 100);
+            $table->string('url', 200);
 
             $table->foreignId('comment_id')->constrained();
             $table->timestamps();
